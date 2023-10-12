@@ -1,0 +1,21 @@
+<form class="auth" nz-form [nzLayout]="'inline'" [formGroup]="validateForm" (ngSubmit)="onLogin()" *ngIf="!isLoggedIn">
+  <nz-form-item class="login">
+    <nz-form-control nzErrorTip="Пожалуйста, введите свой логин!">
+      <nz-input-group nzPrefixIcon="user">
+        <input formControlName="login" nz-input placeholder="login" id="login" [(ngModel)]="login"/>
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item class="password">
+    <nz-form-control nzErrorTip="Пожалуйста, введите пароль!">
+      <nz-input-group nzPrefixIcon="lock">
+        <input formControlName="password" nz-input type="password" placeholder="Password" [(ngModel)]="password" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item class="enter">
+    <nz-form-control>
+      <button nz-button nzType="primary" [disabled]="!validateForm.valid">Вход</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

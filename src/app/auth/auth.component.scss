@@ -1,0 +1,26 @@
+.auth {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 12rem;
+  margin-left: 30rem;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5)
+}
+
+.login{
+  margin: 10px 15px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5)
+}
+
+.password{
+  margin: 10px 15px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5)
+}
+
+.enter{
+  margin: 10px 15px;
+  padding-left: 5rem;
+}
