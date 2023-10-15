@@ -34,7 +34,7 @@ export class AuthComponent {
 
     }
     else {
-      console.log("Неверные логин и пароль")
+      window.alert("Неверные логин и пароль")
     }
   }
 
