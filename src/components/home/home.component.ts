@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import {first} from "rxjs";
 import {Router} from "@angular/router";
-import { AuthServiceService} from "../auth-service.service";
+import { AuthService} from "../../app/auth.service"
+import { AuthComponent } from '../auth/auth.component';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,17 @@ export class HomeComponent {
   //   this.isLoggedIn = !this.isLoggedIn
   //   this.router.navigate(['/auth'])
   // }
-  constructor(private router: Router, private authService: AuthServiceService) {
+  constructor(private router: Router, public authService: AuthService) {
+  }
+
+  logOut(){
+    const confirmation = window.confirm('Вы уверены, что хотите выйти?');
+    if(confirmation){
+      setTimeout(() =>{
+        this.router.navigate([''])
+        this.authService.onLogout()
+      }, 1000)
+      
+    }  
   }
 }

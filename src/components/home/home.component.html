@@ -1,4 +1,4 @@
-<nz-layout class="main">
+<nz-layout class="main" *ngIf="authService.isLoggedIn">
   <nz-header class="head">
     <div class="logo">
       <a href="https://b24-xd8ekh.bitrix24site.ru/"><img src="./assets/logo_ELSxbssK.png" alt="" ></a>
@@ -23,7 +23,7 @@
               <li nz-menu-item nzSelected>option1</li>
               <li nz-menu-item>option2</li>
               <li nz-menu-item>option3</li>
-              <li nz-menu-item >Выход</li>
+              <li nz-menu-item (click)="logOut()">Выход</li>
             </ul>
           </li>
           <li nz-submenu nzTitle="subnav 2" nzIcon="laptop">

@@ -1,0 +1,21 @@
+<form class="auth" nz-form [nzLayout]="'inline'" [formGroup]="validateForm" (onSubmit)="authorization()" *ngIf="!authService.isLoggedIn">
+  <nz-form-item class="login">
+    <nz-form-control nzErrorTip="Длина логина не менее 5 символов" [nzValidateStatus]="validateControl('login')">
+      <nz-input-group nzPrefixIcon="user">
+        <input formControlName="login" nz-input placeholder="login" id="login"/>
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item class="password">
+    <nz-form-control nzErrorTip="Длина пароля не менее 5 символов">
+      <nz-input-group nzPrefixIcon="lock">
+        <input formControlName="password" nz-input type="password" placeholder="Password"  />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item class="enter">
+    <nz-form-control>
+      <button nz-button nzType="primary" (click)="authorization()" [disabled]="!validateForm.valid">Вход</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

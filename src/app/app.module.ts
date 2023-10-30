@@ -14,15 +14,16 @@ import {NzButtonModule} from "ng-zorro-antd/button";
 import {NzModalModule} from "ng-zorro-antd/modal";
 import {NzFormModule} from "ng-zorro-antd/form";
 import {NzInputModule} from "ng-zorro-antd/input";
-import { AuthComponent } from './auth/auth.component';
-import { HomeComponent } from './home/home.component';
-import { ContainerComponent } from './container/container.component';
+import { AuthComponent } from '../components/auth/auth.component';
+import { HomeComponent } from '../components/home/home.component';
+import { ContainerComponent } from '../components/container/container.component';
 import {NzBreadCrumbModule} from "ng-zorro-antd/breadcrumb";
 import {NzLayoutModule} from "ng-zorro-antd/layout";
 import {NzMenuModule} from "ng-zorro-antd/menu";
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
-import { ThirdComponent } from './third/third.component';
+import { FirstComponent } from '../components/first/first.component';
+import { SecondComponent } from '../components/second/second.component';
+import { ThirdComponent } from '../components/third/third.component';
+import { ModalComponent } from '../components/modal/modal.component';
 
 registerLocaleData(en);
 
@@ -35,6 +36,7 @@ registerLocaleData(en);
     FirstComponent,
     SecondComponent,
     ThirdComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
